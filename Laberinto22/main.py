@@ -48,6 +48,7 @@ print("Al oeste hay: "+hab2.oeste.desc)
 
 #He añadido a todas las clases un atributo desc para comprobar que esta bien, aunque debuggeando también se puede
 
+print("prueba para git")
 
 
 

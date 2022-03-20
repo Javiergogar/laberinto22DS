@@ -6,6 +6,11 @@ from ParedBomba import *
 from Habitacion import *
 from ElementoMapa import *
 
+
+#main para la prueba de la entrega de la practica 2
+
+#NOTA: no he podido hacer bien las comprobaciones porque no me entere que la entrega era para este fin de semana y lo he tenido que hacer deprisa y corriendo
+#En caso de que me lo digas hago las comprobaciones mejor, porque si no no me da tiempo a entregarlo a la hora
 juegoBichos=Juego()
 juegoBichos.laberinto=juegoBichos.laberinto2habitaciones2BichosDec()
 

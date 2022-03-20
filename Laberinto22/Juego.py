@@ -6,6 +6,10 @@ from Puerta import Puerta
 from ParedBomba import ParedBomba
 from Habitacion import Habitacion
 from Laberinto import Laberinto
+from Bomba import Bomba
+from Bicho import Bicho
+from Agresivo import Agresivo
+from Perezoso import Perezoso
 
 class Juego:
     def __init__(self):
@@ -38,6 +42,25 @@ class Juego:
         paredBomba=ParedBomba()
         paredBomba.activa=True
         return paredBomba
+    
+    def fabricarBombaDecora(self,unEm):
+        bomba=Bomba()
+        bomba.component=unEm
+        return bomba
+    
+    def fabricarBichoEn(self,unModo,unaPosicion):
+        bicho=Bicho()
+        bicho.modo=unModo
+        bicho.posicion=unaPosicion
+        return bicho
+    
+    def fabricarAgresivo(self):
+        agresivo=Agresivo()
+        return agresivo
+    
+    def fabricarPerezoso(self):
+        perezoso=Perezoso()
+        return perezoso
         
         
     def laberinto2habitacionesFM(self):

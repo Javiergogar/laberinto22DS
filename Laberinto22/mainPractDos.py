@@ -11,6 +11,7 @@ from ElementoMapa import *
 
 #NOTA: no he podido hacer bien las comprobaciones porque no me entere que la entrega era para este fin de semana y lo he tenido que hacer deprisa y corriendo
 #En caso de que me lo digas hago las comprobaciones mejor, porque si no no me da tiempo a entregarlo a la hora
+#Lo mismo pasa con el UML que esta sin actualizar
 juegoBichos=Juego()
 juegoBichos.laberinto=juegoBichos.laberinto2habitaciones2BichosDec()
 

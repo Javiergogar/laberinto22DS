@@ -14,7 +14,11 @@ from Perezoso import Perezoso
 class Juego:
     def __init__(self):
         self.laberinto=Laberinto()
+        self.bichos=[]
         self.desc="soy un juego"
+        
+    def agregarBichos(self,unBicho):
+        self.bichos.append(unBicho)
         
         
     def fabricarPared(self):
@@ -82,6 +86,22 @@ class Juego:
         puerta=self.fabricarPuerta(hab1,hab2)
         hab1.sur=puerta
         hab2.norte=puerta
+        self.laberinto.habitaciones.append(hab1)
+        self.laberinto.habitaciones.append(hab2)
+        return self.laberinto
+    
+    def laberinto2habitaciones2BichosDec(self):
+        pared=self.fabricarPared()
+        bomba=self.fabricarBombaDecora(pared)
+        hab1=self.fabricarHabitacion(pared,None, bomba, pared,1)
+        hab2=self.fabricarHabitacion(None, pared, bomba, pared,2)
+        puerta=self.fabricarPuerta(hab1,hab2)
+        hab1.sur=puerta
+        hab2.norte=puerta
+        bichoAgr=self.fabricarBichoEn(self.fabricarAgresivo,hab1)
+        bichoPer=self.fabricarBichoEn(self.fabricarPerezoso,hab2)
+        self.agregarBichos(bichoAgr)
+        self.agregarBichos(bichoPer)
         self.laberinto.habitaciones.append(hab1)
         self.laberinto.habitaciones.append(hab2)
         return self.laberinto

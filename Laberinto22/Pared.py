@@ -1,6 +1,7 @@
 #Esta clase es el lado de una habitacion que no se puede atravesar
-from ElementoMapa import ElementoMapa
-class Pared(ElementoMapa):
+
+from Hoja import Hoja
+class Pared(Hoja):
     def __init__(self):
         self.desc="soy una pared"
        

@@ -34,7 +34,7 @@ class Juego:
    
     
     def fabricarHabitacion(self,norte,sur,este,oeste,num):
-        habitacion=Habitacion(num)
+        habitacion=Habitacion()
         habitacion.num=num
         habitacion.norte=norte
         habitacion.sur=sur

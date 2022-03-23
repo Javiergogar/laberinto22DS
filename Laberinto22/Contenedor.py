@@ -4,13 +4,13 @@ from ElementoMapa import ElementoMapa
 
 class Contenedor(ElementoMapa):
     def __init__(self):
-        hijos=[]
-        orientaciones=[]
-        num=any
-        este=any
-        oeste=any
-        norte=any
-        sur=any
+        self.hijos=[]
+        self.orientaciones=[]
+        self.num=any
+        self.este=any
+        self.oeste=any
+        self.norte=any
+        self.sur=any
         self.desc="soy un Contenedor"
         
         

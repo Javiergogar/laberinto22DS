@@ -5,6 +5,7 @@ from Puerta import *
 from ParedBomba import *
 from Habitacion import *
 from ElementoMapa import *
+from Contenedor import *
 
 
 #main para la prueba de la entrega de la practica 2
@@ -44,4 +45,8 @@ print("Al sur hay: "+hab3.sur.desc)
 print("Al norte hay: "+hab3.norte.desc)
 print("Al este hay: "+hab3.este.desc)
 print("Al oeste hay: "+hab3.oeste.desc)
+
+
+
+
 

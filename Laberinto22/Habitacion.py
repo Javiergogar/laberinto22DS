@@ -3,7 +3,7 @@ from Contenedor import Contenedor
 
 class Habitacion(Contenedor):
     def __init__(self):
-            
-        self.desc=None
+        Contenedor.__init__(self)    
+        self.desc="soy la habitacion"
        
         

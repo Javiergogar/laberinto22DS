@@ -107,11 +107,11 @@ class Juego:
         
         puerta2=self.fabricarPuerta(hab3,hab4)
         hab3.ponerEnEM(self.fabricarSur(),puerta2)
-        hab4.ponerEnEm(self.fabricarNorte(),puerta2)
+        hab4.ponerEnEM(self.fabricarNorte(),puerta2)
         
         puerta3=self.fabricarPuerta(hab4,hab2)
         hab4.ponerEnEM(self.fabricarOeste(),puerta3)
-        hab2.ponerEnEm(self.fabricarEste(),puerta3)
+        hab2.ponerEnEM(self.fabricarEste(),puerta3)
         
         puerta4=self.fabricarPuerta(hab2,hab1)
         hab2.ponerEnEM(self.fabricarNorte(),puerta4)
@@ -127,8 +127,8 @@ class Juego:
         self.agregarBichos(bicho3)
         self.agregarBichos(bicho4)
         
-        hab1.agregarHijo(self.fabricarBombaDecora())
-        hab4.agregarHijo(self.fabricarBombaDecora())
+        hab1.agregarHijo(self.fabricarBombaDecora(hab1))
+        hab4.agregarHijo(self.fabricarBombaDecora(hab4))
         
         self.laberinto.agregarHabitaciones(hab1)
         self.laberinto.agregarHabitaciones(hab2)

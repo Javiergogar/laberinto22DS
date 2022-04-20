@@ -1,4 +1,5 @@
 #Es un clase que representa un conjunto de habitaciones
+#Aqui implementamos el iterator para recorrer todo el laberinto
 
 class Laberinto:
     def __init__(self):
@@ -7,3 +8,8 @@ class Laberinto:
         
     def agregarHabitaciones(self,unaHab):
         self.habitaciones.append(unaHab)
+        
+    def recorrer(self,unBloque):
+        print("Recorrer el laberinto")
+        for i in self.habitaciones:
+            i.recorrer(unBloque)

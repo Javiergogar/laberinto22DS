@@ -42,6 +42,11 @@ print("Al norte hay: "+hab4.norte.desc)
 print("Al este hay: "+hab4.este.desc)
 print("Al oeste hay: "+hab4.oeste.desc)
 
+print("Prueba para actua")
+for i in juegoPr3.bichos:
+    i.actua()
+
+
 
 
 

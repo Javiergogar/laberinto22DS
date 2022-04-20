@@ -117,10 +117,10 @@ class Juego:
         hab2.ponerEnEM(self.fabricarNorte(),puerta4)
         hab1.ponerEnEM(self.fabricarSur(),puerta4)
         
-        bicho1=self.fabricarBichoEn(self.fabricarAgresivo,hab1)
-        bicho2=self.fabricarBichoEn(self.fabricarPerezoso,hab2)
-        bicho3=self.fabricarBichoEn(self.fabricarAgresivo,hab3)
-        bicho4=self.fabricarBichoEn(self.fabricarPerezoso,hab4)
+        bicho1=self.fabricarBichoEn(self.fabricarAgresivo(),hab1)
+        bicho2=self.fabricarBichoEn(self.fabricarPerezoso(),hab2)
+        bicho3=self.fabricarBichoEn(self.fabricarAgresivo(),hab3)
+        bicho4=self.fabricarBichoEn(self.fabricarPerezoso(),hab4)
         
         self.agregarBichos(bicho1)
         self.agregarBichos(bicho2)

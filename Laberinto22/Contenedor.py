@@ -34,4 +34,10 @@ class Contenedor(ElementoMapa):
     def obtenerOrientaciones(self):
         return self.orientaciones
     
+    def recorrer(self,unBloque):
+        for i in self.hijos:
+            i.recorrer(unBloque)
+        for i in self.orientaciones:
+            i.recorrer(unBloque)
+    
         

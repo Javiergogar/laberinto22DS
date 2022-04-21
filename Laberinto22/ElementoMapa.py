@@ -4,3 +4,6 @@ class ElementoMapa:
         self.padre=any
         self.desc="soy un EM"
         
+    def recorrer(self,unBloque):
+        return unBloque
+        

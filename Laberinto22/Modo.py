@@ -10,6 +10,6 @@ class Modo:
         
     def actua(self):
         self.dormir()
-        "self.atacar"    #de momento solo implementado dormir, el template funciona
-        "self.moverme()"
+        self.atacar()    #implementados como prints, menos dormir que si espera
+        self.moverme()
         

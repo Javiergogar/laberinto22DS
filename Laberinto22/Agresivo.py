@@ -9,3 +9,10 @@ class Agresivo(Modo):
     def dormir(self):
         time.sleep(3)
         print("he esperado 3 segundos")
+        
+    def atacar(self):
+        print("Los bichos agresivos atacan con mucha rabia")
+        
+    def moverme(self):
+        print("El bicho agresivo se mueve")
+        

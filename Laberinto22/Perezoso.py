@@ -9,3 +9,9 @@ class Perezoso(Modo):
     def dormir(self):
         time.sleep(3)
         print("he esperado 3 segundos")
+        
+    def atacar(self):
+        print("Soy un bicho perezoso ataca tu")
+        
+    def moverme(self):
+        print("Soy un bicho perezoso no se yo si me voy a mover")

@@ -1,3 +1,4 @@
+from pickle import TRUE
 from Juego import *
 from Laberinto import *
 from Pared import *
@@ -12,10 +13,10 @@ from Contenedor import *
 juegoPr3=Juego()
 juegoPr3.laberinto=juegoPr3.laberinto4habitacionesPr3()
 
-hab1=juegoPr3.laberinto.habitaciones.pop(0)
-hab2=juegoPr3.laberinto.habitaciones.pop(0)
-hab3=juegoPr3.laberinto.habitaciones.pop(0)
-hab4=juegoPr3.laberinto.habitaciones.pop(0)
+hab1=juegoPr3.laberinto.habitaciones[0]
+hab2=juegoPr3.laberinto.habitaciones[1]
+hab3=juegoPr3.laberinto.habitaciones[2]
+hab4=juegoPr3.laberinto.habitaciones[3]
 print(juegoPr3.laberinto.habitaciones)
 print("Laberinto Pr3")
 print("Primera habitación: "+hab1.desc,str(hab1.num))
@@ -42,9 +43,14 @@ print("Al norte hay: "+hab4.norte.desc)
 print("Al este hay: "+hab4.este.desc)
 print("Al oeste hay: "+hab4.oeste.desc)
 
-print("Prueba para actua")
+"""print("Prueba para actua")
 for i in juegoPr3.bichos:
-    i.actua()
+    i.actua()"""
+    
+juegoPr3.laberinto.recorrer(juegoPr3.laberinto)
+
+print("prueba")
+    
 
 
 

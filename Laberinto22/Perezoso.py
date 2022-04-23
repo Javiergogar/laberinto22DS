@@ -5,10 +5,10 @@ class Perezoso(Modo):
     def __init__(self):
         self.desc="soy un perezoso"
         
-        
+    #template    
     def dormir(self):
-        time.sleep(3)
-        print("he esperado 3 segundos")
+        time.sleep(5)
+        print("he esperado 5 segundos")
         
     def atacar(self):
         print("Soy un bicho perezoso ataca tu")

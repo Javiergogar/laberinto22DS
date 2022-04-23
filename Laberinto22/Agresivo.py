@@ -5,7 +5,7 @@ class Agresivo(Modo):
     def __init__(self):
         self.desc="soy un agresivo"
         
-        
+    #template    
     def dormir(self):
         time.sleep(3)
         print("he esperado 3 segundos")

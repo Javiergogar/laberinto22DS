@@ -7,7 +7,7 @@ class Modo:
     def __init__(self):
         self.bicho=any
         self.desc="soy un modo"
-        
+    #template    
     def actua(self):
         self.dormir()
         self.atacar()    #implementados como prints, menos dormir que si espera

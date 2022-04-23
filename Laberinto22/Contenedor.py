@@ -33,12 +33,11 @@ class Contenedor(ElementoMapa):
         
     def obtenerOrientaciones(self):
         return self.orientaciones
-    #iterator
+    #iterator, en caso de no ser una habitacion y no estar implementado en otro posible contenedor
     def recorrer(self,unBloque):
         print("Recorriendo contenedor-",self.num)
         for i in self.hijos:
             i.recorrer(unBloque)
-        for i in self.orientaciones:
-            i.recorrer(unBloque)
+        
     
         

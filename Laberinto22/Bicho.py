@@ -6,6 +6,6 @@ class Bicho:
         self.posicion=any
         self.desc="soy un bicho"
         
-        
+    #template    
     def actua(self):
         self.modo.actua()

@@ -9,10 +9,7 @@ class Habitacion(Contenedor):
     def esHabitacion(self):
         return True
     
-    #Para probar iteraror   
-    def imprimirInfo(self):
-        print("Soy la hab-",self.num)
-        
+    #Iterator, cuando el recorrer llegue a este punto, imprime un mensaje con que número de habitación es    
     def recorrer(self,unBloque):
         print("Soy la hab-",self.num)
         for i in self.hijos:

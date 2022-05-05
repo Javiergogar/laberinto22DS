@@ -6,6 +6,7 @@ from ParedBomba import *
 from Habitacion import *
 from ElementoMapa import *
 from Contenedor import *
+from Orientacion import *
 
 
 #main para la prueba de la entrega de la practica 4
@@ -23,5 +24,10 @@ for i in juegoPr4.bichos:
 print("Prueba para iterator")    
 juegoPr4.laberinto.recorrer(juegoPr4.laberinto)  #recorre todos los contenedores del laberinto y en las habitaciones imprime un mensaje según la habitación que sea
 
+
+norte=Norte()
+sur=Sur()
+este=Este()
+oeste=Oeste()
 
     

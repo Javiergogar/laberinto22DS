@@ -14,6 +14,7 @@ from Norte import Norte
 from Sur import Sur
 from Este import Este
 from Oeste import Oeste
+from AbstractFactory.LaberintoAF import *
 
 class Juego:
     def __init__(self):
@@ -94,7 +95,50 @@ class Juego:
     
     
     #  --CONSTRUCCIÓN DE LABERINTOS--
+    #USANDO ABSTRACT FACTORY
+    def laberinto4habitacionesAF(self,unAF):
+        hab1=unAF.fabricarHabitacion(1)
+        hab2=unAF.fabricarHabitacion(2)
+        hab3=unAF.fabricarHabitacion(3)
+        hab4=unAF.fabricarHabitacion(4)
+        
+        puerta1=unAF.fabricarPuerta(hab1,hab3)
+        hab1.ponerEnEM(unAF.fabricarEste(),puerta1)
+        hab3.ponerEnEM(unAF.fabricarOeste(),puerta1)
+        
+        puerta2=unAF.fabricarPuerta(hab3,hab4)
+        hab3.ponerEnEM(unAF.fabricarSur(),puerta2)
+        hab4.ponerEnEM(unAF.fabricarNorte(),puerta2)
+        
+        puerta3=unAF.fabricarPuerta(hab4,hab2)
+        hab4.ponerEnEM(unAF.fabricarOeste(),puerta3)
+        hab2.ponerEnEM(unAF.fabricarEste(),puerta3)
+        
+        puerta4=unAF.fabricarPuerta(hab2,hab1)
+        hab2.ponerEnEM(unAF.fabricarNorte(),puerta4)
+        hab1.ponerEnEM(unAF.fabricarSur(),puerta4)
+        
+        bicho1=unAF.fabricarBichoEn(unAF.fabricarAgresivo(),hab1)
+        bicho2=unAF.fabricarBichoEn(unAF.fabricarPerezoso(),hab2)
+        bicho3=unAF.fabricarBichoEn(unAF.fabricarAgresivo(),hab3)
+        bicho4=unAF.fabricarBichoEn(unAF.fabricarPerezoso(),hab4)
+        
+        self.agregarBichos(bicho1)
+        self.agregarBichos(bicho2)
+        self.agregarBichos(bicho3)
+        self.agregarBichos(bicho4)
+        
+        hab1.agregarHijo(unAF.fabricarBombaDecora(hab1))
+        hab4.agregarHijo(unAF.fabricarBombaDecora(hab4))
+        
+        self.laberinto.agregarHabitaciones(hab1)
+        self.laberinto.agregarHabitaciones(hab2)
+        self.laberinto.agregarHabitaciones(hab3)
+        self.laberinto.agregarHabitaciones(hab4)
+        
+        return self.laberinto
     
+    #USANDO FACTORY METHOD
     def laberinto4habitacionesPr3(self):
         hab1=self.fabricarHabitacion(1)
         hab2=self.fabricarHabitacion(2)
